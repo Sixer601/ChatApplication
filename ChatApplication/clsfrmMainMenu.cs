@@ -16,5 +16,21 @@ namespace ChatApplication
 	   {
 		  InitializeComponent();
 	   }
-    }
+
+		private void btnSignIn_Click(object sender, EventArgs e) {
+
+		}
+
+		private void btnSignUp_Click(object sender, EventArgs e) {
+
+		}
+
+		private void btnForgotPassword_Click(object sender, EventArgs e) {
+
+		}
+
+		private void btnCancel_Click(object sender, EventArgs e) {
+
+		}
+	}
 }
