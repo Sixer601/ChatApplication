@@ -8,13 +8,10 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ChatApplication
-{
-    public partial class clsfrmMainForm: Form
-    {
-	   public clsfrmMainForm ()
-	   {
-		  InitializeComponent();
-	   }
-    }
+namespace ChatApplication {
+	public partial class clsfrmMainForm : Form {
+		public clsfrmMainForm() {
+			InitializeComponent();
+		}
+	}
 }
