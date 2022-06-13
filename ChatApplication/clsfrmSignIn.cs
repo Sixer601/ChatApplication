@@ -13,5 +13,9 @@ namespace ChatApplication {
 		public clsfrmSignIn() {
 			InitializeComponent();
 		}
+
+		private void btnOK_Click(object sender, EventArgs e) {
+
+		}
 	}
 }

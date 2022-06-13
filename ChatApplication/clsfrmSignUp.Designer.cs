@@ -23,34 +23,41 @@
 		/// the contents of this method with the code editor.
 		/// </summary>
 		private void InitializeComponent() {
+			this.components = new System.ComponentModel.Container();
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(clsfrmSignUp));
 			this.btnOK = new System.Windows.Forms.Button();
 			this.btnCancel = new System.Windows.Forms.Button();
 			this.lblUsername = new System.Windows.Forms.Label();
 			this.lblUsernameDescription = new System.Windows.Forms.Label();
 			this.lblPassword = new System.Windows.Forms.Label();
-			this.textBox1 = new System.Windows.Forms.TextBox();
-			this.textBox2 = new System.Windows.Forms.TextBox();
-			this.textBox3 = new System.Windows.Forms.TextBox();
+			this.txtUsername = new System.Windows.Forms.TextBox();
+			this.txtPassword = new System.Windows.Forms.TextBox();
+			this.txtEmail = new System.Windows.Forms.TextBox();
 			this.lblPasswordDescription = new System.Windows.Forms.Label();
 			this.lblEmail = new System.Windows.Forms.Label();
 			this.lblEmailDescription = new System.Windows.Forms.Label();
+			this.erpUsername = new System.Windows.Forms.ErrorProvider(this.components);
+			this.erpPassword = new System.Windows.Forms.ErrorProvider(this.components);
+			this.erpEmail = new System.Windows.Forms.ErrorProvider(this.components);
+			((System.ComponentModel.ISupportInitialize)(this.erpUsername)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.erpPassword)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.erpEmail)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// btnOK
 			// 
-			this.btnOK.DialogResult = System.Windows.Forms.DialogResult.OK;
-			this.btnOK.Location = new System.Drawing.Point(385, 212);
+			this.btnOK.Location = new System.Drawing.Point(406, 212);
 			this.btnOK.Name = "btnOK";
 			this.btnOK.Size = new System.Drawing.Size(75, 23);
 			this.btnOK.TabIndex = 0;
 			this.btnOK.Text = "OK";
 			this.btnOK.UseVisualStyleBackColor = true;
+			this.btnOK.Click += new System.EventHandler(this.btnOK_Click);
 			// 
 			// btnCancel
 			// 
 			this.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-			this.btnCancel.Location = new System.Drawing.Point(466, 212);
+			this.btnCancel.Location = new System.Drawing.Point(487, 212);
 			this.btnCancel.Name = "btnCancel";
 			this.btnCancel.Size = new System.Drawing.Size(75, 23);
 			this.btnCancel.TabIndex = 1;
@@ -69,7 +76,7 @@
 			// lblUsernameDescription
 			// 
 			this.lblUsernameDescription.AutoSize = true;
-			this.lblUsernameDescription.Location = new System.Drawing.Point(343, 16);
+			this.lblUsernameDescription.Location = new System.Drawing.Point(391, 16);
 			this.lblUsernameDescription.MaximumSize = new System.Drawing.Size(200, 0);
 			this.lblUsernameDescription.Name = "lblUsernameDescription";
 			this.lblUsernameDescription.Size = new System.Drawing.Size(171, 32);
@@ -85,31 +92,31 @@
 			this.lblPassword.TabIndex = 4;
 			this.lblPassword.Text = "Password: ";
 			// 
-			// textBox1
+			// txtUsername
 			// 
-			this.textBox1.Location = new System.Drawing.Point(94, 13);
-			this.textBox1.Name = "textBox1";
-			this.textBox1.Size = new System.Drawing.Size(243, 22);
-			this.textBox1.TabIndex = 5;
+			this.txtUsername.Location = new System.Drawing.Point(94, 13);
+			this.txtUsername.Name = "txtUsername";
+			this.txtUsername.Size = new System.Drawing.Size(243, 22);
+			this.txtUsername.TabIndex = 5;
 			// 
-			// textBox2
+			// txtPassword
 			// 
-			this.textBox2.Location = new System.Drawing.Point(94, 66);
-			this.textBox2.Name = "textBox2";
-			this.textBox2.Size = new System.Drawing.Size(243, 22);
-			this.textBox2.TabIndex = 6;
+			this.txtPassword.Location = new System.Drawing.Point(94, 66);
+			this.txtPassword.Name = "txtPassword";
+			this.txtPassword.Size = new System.Drawing.Size(243, 22);
+			this.txtPassword.TabIndex = 6;
 			// 
-			// textBox3
+			// txtEmail
 			// 
-			this.textBox3.Location = new System.Drawing.Point(94, 137);
-			this.textBox3.Name = "textBox3";
-			this.textBox3.Size = new System.Drawing.Size(243, 22);
-			this.textBox3.TabIndex = 7;
+			this.txtEmail.Location = new System.Drawing.Point(94, 137);
+			this.txtEmail.Name = "txtEmail";
+			this.txtEmail.Size = new System.Drawing.Size(243, 22);
+			this.txtEmail.TabIndex = 7;
 			// 
 			// lblPasswordDescription
 			// 
 			this.lblPasswordDescription.AutoSize = true;
-			this.lblPasswordDescription.Location = new System.Drawing.Point(346, 69);
+			this.lblPasswordDescription.Location = new System.Drawing.Point(365, 69);
 			this.lblPasswordDescription.MaximumSize = new System.Drawing.Size(200, 0);
 			this.lblPasswordDescription.Name = "lblPasswordDescription";
 			this.lblPasswordDescription.Size = new System.Drawing.Size(197, 48);
@@ -129,7 +136,7 @@
 			// lblEmailDescription
 			// 
 			this.lblEmailDescription.AutoSize = true;
-			this.lblEmailDescription.Location = new System.Drawing.Point(343, 140);
+			this.lblEmailDescription.Location = new System.Drawing.Point(362, 140);
 			this.lblEmailDescription.MaximumSize = new System.Drawing.Size(200, 0);
 			this.lblEmailDescription.Name = "lblEmailDescription";
 			this.lblEmailDescription.Size = new System.Drawing.Size(200, 48);
@@ -137,17 +144,29 @@
 			this.lblEmailDescription.Text = "This is used in case you need to reset your password. We will not E-mail you for " +
     "anything else.";
 			// 
+			// erpUsername
+			// 
+			this.erpUsername.ContainerControl = this;
+			// 
+			// erpPassword
+			// 
+			this.erpPassword.ContainerControl = this;
+			// 
+			// erpEmail
+			// 
+			this.erpEmail.ContainerControl = this;
+			// 
 			// clsfrmSignUp
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(553, 247);
+			this.ClientSize = new System.Drawing.Size(574, 247);
 			this.Controls.Add(this.lblEmailDescription);
 			this.Controls.Add(this.lblEmail);
 			this.Controls.Add(this.lblPasswordDescription);
-			this.Controls.Add(this.textBox3);
-			this.Controls.Add(this.textBox2);
-			this.Controls.Add(this.textBox1);
+			this.Controls.Add(this.txtEmail);
+			this.Controls.Add(this.txtPassword);
+			this.Controls.Add(this.txtUsername);
 			this.Controls.Add(this.lblPassword);
 			this.Controls.Add(this.lblUsernameDescription);
 			this.Controls.Add(this.lblUsername);
@@ -156,6 +175,9 @@
 			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
 			this.Name = "clsfrmSignUp";
 			this.Text = "Sign Up";
+			((System.ComponentModel.ISupportInitialize)(this.erpUsername)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.erpPassword)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.erpEmail)).EndInit();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
@@ -168,11 +190,14 @@
 		private System.Windows.Forms.Label lblUsername;
 		private System.Windows.Forms.Label lblUsernameDescription;
 		private System.Windows.Forms.Label lblPassword;
-		private System.Windows.Forms.TextBox textBox1;
-		private System.Windows.Forms.TextBox textBox2;
-		private System.Windows.Forms.TextBox textBox3;
+		private System.Windows.Forms.TextBox txtUsername;
+		private System.Windows.Forms.TextBox txtPassword;
+		private System.Windows.Forms.TextBox txtEmail;
 		private System.Windows.Forms.Label lblPasswordDescription;
 		private System.Windows.Forms.Label lblEmail;
 		private System.Windows.Forms.Label lblEmailDescription;
+		private System.Windows.Forms.ErrorProvider erpUsername;
+		private System.Windows.Forms.ErrorProvider erpPassword;
+		private System.Windows.Forms.ErrorProvider erpEmail;
 	}
 }

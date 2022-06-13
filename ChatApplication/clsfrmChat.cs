@@ -11,7 +11,11 @@ using System.Windows.Forms;
 namespace ChatApplication {
 	public partial class clsfrmMainForm : Form {
 		public clsfrmMainForm() {
-			InitializeComponent();
+			clsfrmMainMenu frmMainMenu = new clsfrmMainMenu();
+			frmMainMenu.ShowDialog();
+			if (frmMainMenu.DialogResult == DialogResult.OK) {
+				InitializeComponent();
+			}
 		}
 	}
 }

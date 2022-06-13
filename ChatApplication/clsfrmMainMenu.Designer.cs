@@ -29,32 +29,21 @@
 	   private void InitializeComponent ()
 	   {
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(clsfrmMainMenu));
-			this.pictureBox1 = new System.Windows.Forms.PictureBox();
 			this.btnSignIn = new System.Windows.Forms.Button();
 			this.btnSignUp = new System.Windows.Forms.Button();
 			this.btnForgotPassword = new System.Windows.Forms.Button();
 			this.btnCancel = new System.Windows.Forms.Button();
-			this.label1 = new System.Windows.Forms.Label();
-			this.label2 = new System.Windows.Forms.Label();
-			this.label3 = new System.Windows.Forms.Label();
-			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+			this.lblSignIn = new System.Windows.Forms.Label();
+			this.lblSignUp = new System.Windows.Forms.Label();
+			this.lblForgotPassword = new System.Windows.Forms.Label();
+			this.pbxImage = new System.Windows.Forms.PictureBox();
+			((System.ComponentModel.ISupportInitialize)(this.pbxImage)).BeginInit();
 			this.SuspendLayout();
-			// 
-			// pictureBox1
-			// 
-			this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-			this.pictureBox1.Location = new System.Drawing.Point(84, 13);
-			this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-			this.pictureBox1.Name = "pictureBox1";
-			this.pictureBox1.Size = new System.Drawing.Size(200, 185);
-			this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-			this.pictureBox1.TabIndex = 0;
-			this.pictureBox1.TabStop = false;
 			// 
 			// btnSignIn
 			// 
 			this.btnSignIn.Location = new System.Drawing.Point(17, 252);
-			this.btnSignIn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.btnSignIn.Margin = new System.Windows.Forms.Padding(4);
 			this.btnSignIn.Name = "btnSignIn";
 			this.btnSignIn.Size = new System.Drawing.Size(132, 28);
 			this.btnSignIn.TabIndex = 1;
@@ -65,7 +54,7 @@
 			// btnSignUp
 			// 
 			this.btnSignUp.Location = new System.Drawing.Point(17, 334);
-			this.btnSignUp.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.btnSignUp.Margin = new System.Windows.Forms.Padding(4);
 			this.btnSignUp.Name = "btnSignUp";
 			this.btnSignUp.Size = new System.Drawing.Size(132, 28);
 			this.btnSignUp.TabIndex = 2;
@@ -76,7 +65,7 @@
 			// btnForgotPassword
 			// 
 			this.btnForgotPassword.Location = new System.Drawing.Point(17, 411);
-			this.btnForgotPassword.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.btnForgotPassword.Margin = new System.Windows.Forms.Padding(4);
 			this.btnForgotPassword.Name = "btnForgotPassword";
 			this.btnForgotPassword.Size = new System.Drawing.Size(132, 28);
 			this.btnForgotPassword.TabIndex = 3;
@@ -88,7 +77,7 @@
 			// 
 			this.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
 			this.btnCancel.Location = new System.Drawing.Point(245, 468);
-			this.btnCancel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.btnCancel.Margin = new System.Windows.Forms.Padding(4);
 			this.btnCancel.Name = "btnCancel";
 			this.btnCancel.Size = new System.Drawing.Size(100, 28);
 			this.btnCancel.TabIndex = 4;
@@ -96,57 +85,69 @@
 			this.btnCancel.UseVisualStyleBackColor = true;
 			this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
 			// 
-			// label1
+			// lblSignIn
 			// 
-			this.label1.AutoSize = true;
-			this.label1.Location = new System.Drawing.Point(159, 258);
-			this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-			this.label1.MaximumSize = new System.Drawing.Size(200, 0);
-			this.label1.Name = "label1";
-			this.label1.Size = new System.Drawing.Size(196, 32);
-			this.label1.TabIndex = 5;
-			this.label1.Text = "Use existing account to log in to the chatroom.";
+			this.lblSignIn.AutoSize = true;
+			this.lblSignIn.Location = new System.Drawing.Point(159, 258);
+			this.lblSignIn.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+			this.lblSignIn.MaximumSize = new System.Drawing.Size(200, 0);
+			this.lblSignIn.Name = "lblSignIn";
+			this.lblSignIn.Size = new System.Drawing.Size(196, 32);
+			this.lblSignIn.TabIndex = 5;
+			this.lblSignIn.Text = "Use existing account to log in to the chatroom.";
 			// 
-			// label2
+			// lblSignUp
 			// 
-			this.label2.AutoSize = true;
-			this.label2.Location = new System.Drawing.Point(159, 334);
-			this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-			this.label2.MaximumSize = new System.Drawing.Size(200, 0);
-			this.label2.Name = "label2";
-			this.label2.Size = new System.Drawing.Size(190, 32);
-			this.label2.TabIndex = 6;
-			this.label2.Text = "Create new account to log in to the chatroom.";
+			this.lblSignUp.AutoSize = true;
+			this.lblSignUp.Location = new System.Drawing.Point(159, 334);
+			this.lblSignUp.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+			this.lblSignUp.MaximumSize = new System.Drawing.Size(200, 0);
+			this.lblSignUp.Name = "lblSignUp";
+			this.lblSignUp.Size = new System.Drawing.Size(190, 32);
+			this.lblSignUp.TabIndex = 6;
+			this.lblSignUp.Text = "Create new account to log in to the chatroom.";
 			// 
-			// label3
+			// lblForgotPassword
 			// 
-			this.label3.AutoSize = true;
-			this.label3.Location = new System.Drawing.Point(159, 411);
-			this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-			this.label3.MaximumSize = new System.Drawing.Size(200, 0);
-			this.label3.Name = "label3";
-			this.label3.Size = new System.Drawing.Size(198, 32);
-			this.label3.TabIndex = 7;
-			this.label3.Text = "Send an E-mail to associated address to reset your password.";
+			this.lblForgotPassword.AutoSize = true;
+			this.lblForgotPassword.Location = new System.Drawing.Point(159, 411);
+			this.lblForgotPassword.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+			this.lblForgotPassword.MaximumSize = new System.Drawing.Size(200, 0);
+			this.lblForgotPassword.Name = "lblForgotPassword";
+			this.lblForgotPassword.Size = new System.Drawing.Size(198, 32);
+			this.lblForgotPassword.TabIndex = 7;
+			this.lblForgotPassword.Text = "Send an E-mail to associated address to reset your password.";
+			// 
+			// pbxImage
+			// 
+			this.pbxImage.Image = ((System.Drawing.Image)(resources.GetObject("pbxImage.Image")));
+			this.pbxImage.Location = new System.Drawing.Point(84, 13);
+			this.pbxImage.Margin = new System.Windows.Forms.Padding(4);
+			this.pbxImage.Name = "pbxImage";
+			this.pbxImage.Size = new System.Drawing.Size(200, 185);
+			this.pbxImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+			this.pbxImage.TabIndex = 0;
+			this.pbxImage.TabStop = false;
 			// 
 			// clsfrmMainMenu
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(361, 511);
-			this.Controls.Add(this.label3);
-			this.Controls.Add(this.label2);
-			this.Controls.Add(this.label1);
+			this.Controls.Add(this.lblForgotPassword);
+			this.Controls.Add(this.lblSignUp);
+			this.Controls.Add(this.lblSignIn);
 			this.Controls.Add(this.btnCancel);
 			this.Controls.Add(this.btnForgotPassword);
 			this.Controls.Add(this.btnSignUp);
 			this.Controls.Add(this.btnSignIn);
-			this.Controls.Add(this.pictureBox1);
+			this.Controls.Add(this.pbxImage);
 			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-			this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.Margin = new System.Windows.Forms.Padding(4);
 			this.Name = "clsfrmMainMenu";
+			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Text = "Main Menu";
-			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.pbxImage)).EndInit();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
@@ -154,13 +155,13 @@
 
 	   #endregion
 
-	   private System.Windows.Forms.PictureBox pictureBox1;
+	   private System.Windows.Forms.PictureBox pbxImage;
 	   private System.Windows.Forms.Button btnSignIn;
 	   private System.Windows.Forms.Button btnSignUp;
 	   private System.Windows.Forms.Button btnForgotPassword;
 	   private System.Windows.Forms.Button btnCancel;
-	   private System.Windows.Forms.Label label1;
-	   private System.Windows.Forms.Label label2;
-	   private System.Windows.Forms.Label label3;
+	   private System.Windows.Forms.Label lblSignIn;
+	   private System.Windows.Forms.Label lblSignUp;
+	   private System.Windows.Forms.Label lblForgotPassword;
     }
 }
