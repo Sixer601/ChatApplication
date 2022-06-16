@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 using System.Text.RegularExpressions;
+using System.Data.SqlClient;
 
 namespace ChatApplication {
 	public partial class clsfrmSignUp : Form {
@@ -40,7 +41,21 @@ namespace ChatApplication {
 				erpPassword.SetError(txtPassword, "Please use a capital letter.");
 			}
 			else {
-				this.DialogResult = DialogResult.OK;
+			     string strSQLConnetionString = "Data Source=mis-sdbgis;Initial Catalog=GIS;Integrated Security=SSPI;Uid = GRIMMWAY\\SBeardsley";
+			     // Integrated Security is for Windows Authentication. This code is only for grimmway's database.
+			     // TODO: Change connection string to match computer's database.
+			     // TODO: Implement a remote connection to computer's database using IP + port.
+			     SqlConnection scnSQLConnection;
+			     scnSQLConnection = new SqlConnection(strSQLConnetionString);
+			     try {
+				    scnSQLConnection.Open();
+				    // TODO: Create adding of account information into the database.
+				    scnSQLConnection.Close();
+				    this.DialogResult = DialogResult.OK;
+			     }
+			     catch (Exception ex) {
+				    // TODO: Add way to provide error stating that a connection to the database could not be established.
+			     }
 			}
 		}
 	}

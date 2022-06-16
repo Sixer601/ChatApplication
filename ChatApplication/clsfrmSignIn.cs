@@ -25,7 +25,7 @@ namespace ChatApplication {
 		  scnSQLConnection = new SqlConnection(strSQLConnetionString);
 		  try{
 			 scnSQLConnection.Open();
-			 // Run check against database for if username and password exist in database.
+			 // TODO: Create check against database for if username and password exist in database.
 			 scnSQLConnection.Close();
 		  }
 		  catch (Exception ex)
