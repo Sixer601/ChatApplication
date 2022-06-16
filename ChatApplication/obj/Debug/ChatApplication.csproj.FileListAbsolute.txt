@@ -24,3 +24,7 @@ C:\Users\sixer\Source\Repos\ChatApplication\ChatApplication\obj\Debug\ChatApplic
 C:\Users\sixer\Source\Repos\ChatApplication\ChatApplication\obj\Debug\ChatApplication.exe
 C:\Users\sixer\Source\Repos\ChatApplication\ChatApplication\obj\Debug\ChatApplication.pdb
 C:\Users\sixer\Source\Repos\ChatApplication\ChatApplication\obj\Debug\ChatApplication.clsfrmForgotPassword.resources
+C:\Source\Sean\ChatApplication\ChatApplication\obj\Debug\ChatApplication.clsfrmForgotPassword.resources
+C:\Source\Sean\ChatApplication\ChatApplication\obj\Debug\ChatApplication.clsfrmMainMenu.resources
+C:\Source\Sean\ChatApplication\ChatApplication\obj\Debug\ChatApplication.clsfrmSignIn.resources
+C:\Source\Sean\ChatApplication\ChatApplication\obj\Debug\ChatApplication.clsfrmSignUp.resources
