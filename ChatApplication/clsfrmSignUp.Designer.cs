@@ -172,8 +172,12 @@
 			this.Controls.Add(this.lblUsername);
 			this.Controls.Add(this.btnCancel);
 			this.Controls.Add(this.btnOK);
+			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
 			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+			this.MaximizeBox = false;
+			this.MinimizeBox = false;
 			this.Name = "clsfrmSignUp";
+			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
 			this.Text = "Sign Up";
 			((System.ComponentModel.ISupportInitialize)(this.erpUsername)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.erpPassword)).EndInit();

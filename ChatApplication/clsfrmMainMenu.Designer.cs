@@ -125,7 +125,7 @@
 			this.pbxImage.Margin = new System.Windows.Forms.Padding(4);
 			this.pbxImage.Name = "pbxImage";
 			this.pbxImage.Size = new System.Drawing.Size(200, 185);
-			this.pbxImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+			this.pbxImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
 			this.pbxImage.TabIndex = 0;
 			this.pbxImage.TabStop = false;
 			// 
@@ -142,8 +142,11 @@
 			this.Controls.Add(this.btnSignUp);
 			this.Controls.Add(this.btnSignIn);
 			this.Controls.Add(this.pbxImage);
+			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
 			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
 			this.Margin = new System.Windows.Forms.Padding(4);
+			this.MaximizeBox = false;
+			this.MinimizeBox = false;
 			this.Name = "clsfrmMainMenu";
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Text = "Main Menu";

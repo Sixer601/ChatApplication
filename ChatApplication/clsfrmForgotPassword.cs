@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+using System.Net.Mail;
 using System.Text.RegularExpressions;
 
 namespace ChatApplication {
@@ -23,7 +24,16 @@ namespace ChatApplication {
 				erpEmail.SetError(txtEmail, "Please enter a valid e-mail address.");
 			}
 			else {
-				this.DialogResult = DialogResult.Cancel;
+
+				//var smtpClient = new SmtpClient("smtp.gmail.com") {
+				//	Port = 587,
+				//	Credentials = new NetworkCredential("email", "password"),
+				//	EnableSsl = true,
+				//};
+
+				//smtpClient.Send("email", "recipient", "subject", "body");
+
+				//this.DialogResult = DialogResult.Cancel;
 			}
 		}
 	}

@@ -16,6 +16,9 @@ namespace ChatApplication {
 			if (frmMainMenu.DialogResult == DialogResult.OK) {
 				InitializeComponent();
 			}
+			else if (frmMainMenu.DialogResult == DialogResult.Cancel) {
+				Environment.Exit(-1);
+			}
 		}
 	}
 }

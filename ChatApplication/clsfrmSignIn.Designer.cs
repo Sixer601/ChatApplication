@@ -109,8 +109,12 @@
 			this.Controls.Add(this.txtUsername);
 			this.Controls.Add(this.lblPassword);
 			this.Controls.Add(this.lblUsername);
+			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
 			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+			this.MaximizeBox = false;
+			this.MinimizeBox = false;
 			this.Name = "clsfrmSignIn";
+			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
 			this.Text = "Sign In";
 			((System.ComponentModel.ISupportInitialize)(this.erpUsername)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.erpPassword)).EndInit();
