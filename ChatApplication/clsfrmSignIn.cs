@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+using System.Data.SqlClient;
+
 namespace ChatApplication {
 	public partial class clsfrmSignIn : Form {
 		public clsfrmSignIn() {
