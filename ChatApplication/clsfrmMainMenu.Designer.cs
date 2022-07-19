@@ -120,7 +120,7 @@
 			// 
 			// pbxImage
 			// 
-			this.pbxImage.Image = ((System.Drawing.Image)(resources.GetObject("pbxImage.Image")));
+			this.pbxImage.Image = global::ChatApplication.Properties.Resources.SeanEmailLogo2;
 			this.pbxImage.Location = new System.Drawing.Point(84, 13);
 			this.pbxImage.Margin = new System.Windows.Forms.Padding(4);
 			this.pbxImage.Name = "pbxImage";
